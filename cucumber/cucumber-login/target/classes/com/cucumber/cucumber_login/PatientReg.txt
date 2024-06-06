@@ -1,0 +1,201 @@
+package loginsteps;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import static org.junit.Assert.assertTrue;
+import java.time.Duration;
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class PatientReg {
+
+    private WebDriver driver;
+    private WebDriverWait wait; // Adding WebDriverWait
+
+    @Before
+    public void setup() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        // wait = new WebDriverWait(driver, 10); // Initialize WebDriverWait with a timeout of 10 seconds
+    }
+
+    @Given("the user has logged into the application")
+    public void the_user_has_logged_into_the_application() {
+        loginToApplication("admin", "pass123"); // Placeholder for username and password
+    }
+
+    @Given("the user navigates to {string}")
+    public void the_user_navigates_to(String url) {
+        driver.get(url);
+        // ngWebDriver.waitForAngularRequestToFinish()
+    }
+
+//    @When("the user clicks on the {string} tab")
+//    public void the_user_clicks_on_the_tab(String tab) {
+//    	String cssSelector = ".left-nav-active[href*='#Patient']";
+//        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(cssSelector))).click();
+//        
+//    }
+    
+    
+//    @When("the user expands the {string} menu")
+//    public void the_user_expands_the_menu(String menuName) {
+//        WebElement downArrow = wait.until(ExpectedConditions.elementToBeClickable(
+//            By.cssSelector("a[href='#" + menuName + "'] + span.ad-sign[data-toggle='collapse']")));
+//        downArrow.click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//            By.cssSelector("ul#Patient.sub-menu.collapse.in")));
+//    }
+
+    
+//    @When("the user expands the {string} menu")
+//    public void the_user_expands_the_menu(String menuName) {
+//        // This CSS selector targets the down arrow button specifically by its class and data attributes
+//        WebElement downArrow = wait.until(ExpectedConditions.elementToBeClickable(
+//            By.cssSelector("span.ad-sign[data-toggle='collapse'][data-target='#" + menuName + "']")));
+//        downArrow.click();
+//
+//        // Wait for the submenu to expand and be visible
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//            By.cssSelector("ul#Patient.sub-menu.collapse.in")));
+//    }
+
+//    public void waitForAngularRequestsToFinish() {
+//        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//        String angularReadyScript = "return window.getAllAngularTestabilities().findIndex(x=>!x.isStable()) === -1";
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait.until(driver -> Boolean.valueOf(jsExecutor.executeScript(angularReadyScript).toString()));
+//    }
+//
+//    @When("the user expands the {string} menu")
+//    public void the_user_expands_the_menu(String menuName) {
+//        waitForAngularRequestsToFinish();
+//        WebElement downArrow = wait.until(ExpectedConditions.presenceOfElementLocated(
+//            By.cssSelector("span.ad-sign[data-toggle='collapse'][data-target='#" + menuName + "']")));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", downArrow);
+//        waitForAngularRequestsToFinish();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(
+//            By.cssSelector("ul#Patient.sub-menu.collapse.in")));
+//    }
+
+
+    
+    @When("the user clicks on the {string} tab")
+    public void the_user_clicks_on_the_tab(String tab) {
+        // Wait for the 'Patient' menu in the sidebar to be clickable and then click it
+        WebElement patientMenu = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='#Patient']")));
+        patientMenu.click();
+        
+        // Wait for the JavaScript and animations to finish
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul#Patient.sub-menu.collapse.in")));
+    }
+    
+
+@When("the user clicks on the Register Patient submenu")
+public void the_user_clicks_on_register_patient_submenu() {
+    // Wait for the 'Register Patient' link to become visible and then hover over it
+    WebElement registerPatientLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='RegisterPatient']")));
+    
+    // Hover over the link to make it clickable
+    Actions action = new Actions(driver);
+    action.moveToElement(registerPatientLink).perform();
+    
+    // Wait for the link to be clickable after hover and then click it
+    wait.until(ExpectedConditions.elementToBeClickable(registerPatientLink));
+    registerPatientLink.click();
+    
+    // This code assumes that the registration form is directly on the page, not in an iframe
+    // If it's inside an iframe, you'll need to switch to that iframe before interacting with the form
+}
+
+    
+//    @When("the user clicks on the {string} submenu option under the {string} menu")
+//    public void the_user_clicks_on_the_submenu_option_under_the_menu(String submenuOption, String menuName) {
+//        String submenuOptionCssSelector = String.format("ul#Patient.sub-menu.collapse.in a[href*='%s']", submenuOption.replace(" ", ""));
+//        WebElement submenuOptionElement = wait.until(ExpectedConditions.elementToBeClickable(
+//            By.cssSelector(submenuOptionCssSelector)));
+//        submenuOptionElement.click();
+//    }
+
+
+//    @Then("all the registration form fields should be present")
+//    public void all_the_registration_form_fields_should_be_present() {
+//        List<WebElement> inputFields = driver.findElements(By.xpath("//input[@required]"));
+//        boolean allFieldsPresent = inputFields.stream().allMatch(WebElement::isDisplayed);
+//        assertTrue("Not all registration fields are present", allFieldsPresent);
+//    }
+    
+    @Then("all the registration form fields should be present")
+    public void all_the_registration_form_fields_should_be_present() {
+        // Define the expected required fields with the type, id or name
+        HashMap<String, By> requiredFields = new HashMap<>();
+        requiredFields.put("First Name", By.id("regFirstName"));
+        requiredFields.put("Last Name", By.id("regLastName"));
+        requiredFields.put("Age", By.id("age"));
+        requiredFields.put("Phone number", By.id("PhoneNumber"));
+        requiredFields.put("Country", By.id("ddlCountry"));
+        requiredFields.put("Sub County", By.id("ddlSubCounty"));
+        requiredFields.put("Gender", By.id("ddlGender"));
+        // ... continue for all other required fields provided in the screenshots
+
+        // Check if each required field is present and displayed on the form
+        for (Map.Entry<String, By> fieldEntry : requiredFields.entrySet()) {
+            String fieldName = fieldEntry.getKey();
+            By locator = fieldEntry.getValue();
+            
+            // Find the element using the locator
+            List<WebElement> elements = driver.findElements(locator);
+
+            // Ensure the element is present and displayed
+            boolean isFieldPresent = elements.stream().anyMatch(WebElement::isDisplayed);
+
+            // Assert that the field is present
+            assertTrue("The required field '" + fieldName + "' is not present on the form.", isFieldPresent);
+        }
+    }
+
+
+//    @When("the user attempts to submit the registration form with all mandatory fields empty")
+//    public void the_user_attempts_to_submit_the_registration_form_with_all_mandatory_fields_empty() {
+//    	// Assuming 'wait' has been initialized as an instance of WebDriverWait
+//    	wait.until(ExpectedConditions.elementToBeClickable(By.id("regPatientSubmitBtn"))).click();
+//    	wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+////    	wait.until(ExpectedConditions.elementToBeClickable(By.id("submit-button"))).click(); // Ensure the submit button is clickable
+//    }
+//
+//    @Then("the system should display an error message for all mandatory fields")
+//    public void the_system_should_display_an_error_message_for_all_mandatory_fields() {
+//        List<WebElement> errorMessages = driver.findElements(By.className("error")); // Assuming "error" is the class name for error messages
+//        boolean allFieldsHaveErrors = errorMessages.stream().allMatch(WebElement::isDisplayed);
+//        assertTrue("Not all mandatory fields show an error message", allFieldsHaveErrors);
+//    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    private void loginToApplication(String username, String password) {
+        driver.get("http://localhost:5000"); // URL to your login page
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username_id"))).sendKeys(username); // Adjust the ID as necessary
+        driver.findElement(By.id("password")).sendKeys(password); // Adjust the ID as necessary
+        driver.findElement(By.id("login")).click(); // Adjust the ID as necessary
+    }
+}
