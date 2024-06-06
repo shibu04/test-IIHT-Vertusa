@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-06T20:26:47 IST" name="Suite" finished-at="2024-05-06T20:27:18 IST" duration-ms="30625">
+    <groups>
+    </groups>
+    <test started-at="2024-05-06T20:26:47 IST" name="allTestNG" finished-at="2024-05-06T20:27:18 IST" duration-ms="30625">
+      <class name="testng.danphe.patientReg.LoginTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:26:47 IST" name="beforeSuite" finished-at="2024-05-06T20:26:47 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:26:47 IST" name="beforeClass" finished-at="2024-05-06T20:27:05 IST" duration-ms="17800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:05 IST" name="beforeMethod" finished-at="2024-05-06T20:27:05 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyDanpheEmrHeader()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:05 IST" name="verifyDanpheEmrHeader" finished-at="2024-05-06T20:27:05 IST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDanpheEmrHeader -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:05 IST" name="afterMethod" finished-at="2024-05-06T20:27:05 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:05 IST" name="beforeMethod" finished-at="2024-05-06T20:27:05 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="userLoginAndCheckDashboard()[pri:1, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:05 IST" name="userLoginAndCheckDashboard" finished-at="2024-05-06T20:27:11 IST" duration-ms="5611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLoginAndCheckDashboard -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:11 IST" name="afterMethod" finished-at="2024-05-06T20:27:11 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:11 IST" name="beforeMethod" finished-at="2024-05-06T20:27:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyPatientMenuAndNavigateToSearch()[pri:2, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:11 IST" name="verifyPatientMenuAndNavigateToSearch" finished-at="2024-05-06T20:27:15 IST" duration-ms="4042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPatientMenuAndNavigateToSearch -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="afterMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="beforeMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="navigateToPatientRegistration()[pri:3, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="navigateToPatientRegistration" finished-at="2024-05-06T20:27:15 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToPatientRegistration -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="afterMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="beforeMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyMandatoryFields()[pri:3, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="verifyMandatoryFields" finished-at="2024-05-06T20:27:15 IST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryFields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="afterMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="navigateToInsurancePage()[pri:4, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="navigateToInsurancePage" finished-at="2024-05-06T20:27:16 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToInsurancePage -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:15 IST" name="beforeMethod" finished-at="2024-05-06T20:27:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="afterMethod" finished-at="2024-05-06T20:27:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="beforeMethod" finished-at="2024-05-06T20:27:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyMandatoryInsuranceFields()[pri:5, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="verifyMandatoryInsuranceFields" finished-at="2024-05-06T20:27:16 IST" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryInsuranceFields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="afterMethod" finished-at="2024-05-06T20:27:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="beforeMethod" finished-at="2024-05-06T20:27:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="navigateToAddressPageAndValidate()[pri:6, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:16 IST" name="navigateToAddressPageAndValidate" finished-at="2024-05-06T20:27:17 IST" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToAddressPageAndValidate -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:17 IST" name="afterMethod" finished-at="2024-05-06T20:27:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:17 IST" name="beforeMethod" finished-at="2024-05-06T20:27:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyMandatoryAddressFields()[pri:7, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:17 IST" name="verifyMandatoryAddressFields" finished-at="2024-05-06T20:27:17 IST" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryAddressFields -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:17 IST" name="afterMethod" finished-at="2024-05-06T20:27:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:17 IST" name="afterClass" finished-at="2024-05-06T20:27:18 IST" duration-ms="513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testng.danphe.patientReg.LoginTest@23348b5d]" started-at="2024-05-06T20:27:18 IST" name="afterSuite" finished-at="2024-05-06T20:27:18 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testng.danphe.patientReg.LoginTest -->
+    </test> <!-- allTestNG -->
+  </suite> <!-- Suite -->
+</testng-results>
